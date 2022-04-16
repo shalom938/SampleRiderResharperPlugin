@@ -11,8 +11,7 @@ class RpcDialogAction : AnAction() {
 
     override fun actionPerformed(event: AnActionEvent) {
         val currentProject: Project? = event.project
-        var sampleModel = currentProject?.solution?.sampleModel
-        var result = sampleModel?.hasMethod?.callSynchronously(Unit, sampleModel.protocol)
+        val result = currentProject?.getService(MethodInfoService::class.java)!!.getMethodUnderCaret()
         Messages.showMessageDialog(currentProject, "Result from RPC $result", "RpcDialogAction", Messages.getInformationIcon())
     }
 

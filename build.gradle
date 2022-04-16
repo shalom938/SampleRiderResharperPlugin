@@ -113,7 +113,13 @@ intellij {
     // plugins = ["uml", "com.jetbrains.ChooseRuntime:1.0.9"]
 }
 
+task deleteLogs(type: Delete) {
+    delete project.layout.buildDirectory.dir("idea-sandbox/system/log")
+}
+
+
 runIde {
+    dependsOn("deleteLogs")
     // Match Rider's default heap size of 1.5Gb (default for runIde is 512Mb)
     maxHeapSize = "1500m"
 

@@ -1,18 +1,17 @@
 @file:Suppress("EXPERIMENTAL_API_USAGE","EXPERIMENTAL_UNSIGNED_LITERALS","PackageDirectoryMismatch","UnusedImport","unused","LocalVariableName","CanBeVal","PropertyName","EnumEntryName","ClassName","ObjectPropertyName","UnnecessaryVariable","SpellCheckingInspection")
 package org.rider.plugins.sampleriderplugin
 
-import com.jetbrains.rd.framework.FrameworkMarshallers
-import com.jetbrains.rd.framework.IRdCall
-import com.jetbrains.rd.framework.ISerializers
-import com.jetbrains.rd.framework.base.ISerializersOwner
-import com.jetbrains.rd.framework.base.RdExtBase
-import com.jetbrains.rd.framework.base.deepClonePolymorphic
-import com.jetbrains.rd.framework.impl.RdCall
-import com.jetbrains.rd.framework.impl.RdOptionalProperty
-import com.jetbrains.rd.framework.impl.RdSignal
-import com.jetbrains.rd.util.reactive.IOptProperty
-import com.jetbrains.rd.util.reactive.ISignal
-import com.jetbrains.rd.util.string.PrettyPrinter
+import com.jetbrains.rd.framework.*
+import com.jetbrains.rd.framework.base.*
+import com.jetbrains.rd.framework.impl.*
+
+import com.jetbrains.rd.util.lifetime.*
+import com.jetbrains.rd.util.reactive.*
+import com.jetbrains.rd.util.string.*
+import com.jetbrains.rd.util.*
+import kotlin.reflect.KClass
+import kotlin.jvm.JvmStatic
+
 
 
 /**
